@@ -22,6 +22,7 @@ function RegisterPage() {
       console.log(response);
       localStorage.setItem('token', response.data.jwt);
       localStorage.setItem('user', response.data.user);
+      localStorage.setItem('userName', response.data.user.firstName);
       window.location.href = '/#/home'
 
     }).catch(error => {

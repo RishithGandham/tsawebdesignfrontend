@@ -22,6 +22,12 @@ import ProtectedRoute from './util/auth.util';
 
 import {HashRouter, Routes, Route} from 'react-router-dom';
 
+
+//cus
+import 'react-notifications/lib/notifications.css';
+import { NotificationContainer } from 'react-notifications';
+import ReferencePage from './pages/reference.page';
+
 if (window.location.href === 'http://localhost:3000/') {
     window.location.href = 'http://localhost:3000/#/';
 }
@@ -40,6 +46,7 @@ ReactDOM.render(
         <Route path="/events" element={<ProtectedRoute><EventsPage/></ProtectedRoute>}></Route>
         <Route path="/event/" element={<ProtectedRoute><EventDisplayPage/></ProtectedRoute>}></Route>
         <Route path="/" element={<App/>}></Route>
+        <Route path="/reference" element={<ReferencePage/>}></Route>
         <Route path="*" element={() => {
           return (
           <div className='404-container'>
@@ -49,6 +56,7 @@ ReactDOM.render(
         }}></Route>
       </Routes>
       <Footer />
+      <NotificationContainer/>
     </HashRouter>
 
     

@@ -29,6 +29,7 @@ const ProtectedRoute = ({children}) => {
                 setIsAuthenticated(false);
                 localStorage.removeItem('token');
                 localStorage.removeItem('user');
+                localStorage.removeItem('userName');
                 window.location.href = '/#/login'
             });
             return isAuthenticated;

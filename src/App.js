@@ -37,16 +37,16 @@ function App() {
 
       <div className="container text-center mb-5 ">
         <h2 className='font-weight-bold display-2'>Light and Hope </h2>
-        <h5 className='display-5'>Festivals and Traditions made accessible here</h5>
+        <h5 className='display-5'>Festivals and Traditional Events</h5>
       </div>
       <div className="container d-flex justify-content-center">
-        <img class=" card-img-top rounded display-image"
-          src='http://localhost:5000/assets/sunflower.webp' alt="Card image cap" />
+        <img class=" card-img-top rounded"
+          src='http://tsawebapp.herokuapp.com/assets/sunflower.webp' alt="Card image cap" />
       </div>
 
       <div className='container text-center mt-3'>
         <div class="hero mb-5">
-          <h5>Human for many millennia, have seeked out light and hope; it provides comfort, warmth, the ability to see and the energy to grow food. Light and Hope is celebrated throughout this world, because it shows that during the dark times, there is still hope and light. This is the true importance that these festivals across the world are trying to commemorate. </h5>
+          <h4>For many millennia, humans have seeked out light & hope; it provides comfort, warmth, the ability to see and the energy to grow food. Light and Hope is celebrated throughout this world, because it shows that during the dark times, there is still hope and light. This is the true importance that these festivals across the world are trying to commemorate. </h4>
         </div>
       </div>
 
