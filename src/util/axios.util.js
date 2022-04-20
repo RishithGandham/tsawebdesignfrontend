@@ -2,11 +2,11 @@ import axios from 'axios';
 import { NotificationManager } from 'react-notifications';
 
 const authInstance = axios.create({
-    baseURL: 'http://tsawebapp.herokuapp.com',
+    baseURL: 'https://tsawebapp.herokuapp.com',
 })
 
 axios.interceptors.request.use((config) => {
-    config.url = "".concat('http://tsawebapp.herokuapp.com', config.url);
+    config.url = "".concat('https://tsawebapp.herokuapp.com', config.url);
     return config;
 }, (error) => {
     return Promise.reject(error);
