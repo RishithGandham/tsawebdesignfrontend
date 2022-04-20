@@ -49,6 +49,9 @@ function EventDisplayPage({ props }) {
 
   return (
     <>
+
+
+    
         {event && <div className='container'>
           <div class="row ">
             <div class="col d-flex justify-content-center ">
