@@ -2,19 +2,29 @@ import React, { useEffect, useState, useLayoutEffect} from 'react'
 import { useLocation } from 'react-router-dom'
 import { ImEnter } from 'react-icons/im';
 import authInstance from '../util/axios.util';
+import axios from 'axios';
+import {isAuth} from '../util/auth.util';
 
 
 
 function EventDisplayPage({ props }) {
 
+  const [auth, setAuth] = useState(false);
+
   const location = useLocation();
   const [event, setEvent] = useState(null);
-  useLayoutEffect(() => {
+  useEffect(() => {
+    async function getAuth() {
+      return await isAuth();
+    }
+    getAuth().then(res => {
+      setAuth(res);
+    });
     console.log('hello')
     const query = new URLSearchParams(location.search);
     const id = query.get('q');
     async function fetchEvent() {
-      return await authInstance.post(`/eventResource/getById`, { id: id });
+      return await axios.post(`/eventResource/getById`, { id: id });
     }
     fetchEvent()
       .then(response => {
@@ -69,8 +79,8 @@ function EventDisplayPage({ props }) {
                 <h5><strong> Cost: </strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Free</h5>
                 <h5><strong> Details: </strong> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {event && event.description}</h5>
 
-
-                <button class='btn btn-dark mt-3' onClick={_ => subscribeToEvent(event._id)}>Register For This Event&nbsp; <ImEnter size={30} /></button>
+                {auth ? <button className="btn btn-primary" onClick={subscribeToEvent}>Register For This Event <ImEnter size={30} /></button>: <button className="btn btn-primary" onClick={() => window.location.href = '/#/login'}>You Need To Register Or Login To Sign Up For An Event</button>}
+                
               </div>
             </div>
           </div>

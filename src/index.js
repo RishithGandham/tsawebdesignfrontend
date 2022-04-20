@@ -43,8 +43,8 @@ ReactDOM.render(
         <Route path="/home" element={<ProtectedRoute><UserHomePage/></ProtectedRoute>}></Route>
         <Route path="/login" element={<LoginPage/>}></Route>
         <Route path="/register" element={<RegisterPage/>}></Route>
-        <Route path="/events" element={<ProtectedRoute><EventsPage/></ProtectedRoute>}></Route>
-        <Route path="/event/" element={<ProtectedRoute><EventDisplayPage/></ProtectedRoute>}></Route>
+        <Route path="/events" element={<EventsPage/>}></Route>
+        <Route path="/event/" element={<EventDisplayPage/>}></Route>
         <Route path="/" element={<App/>}></Route>
         <Route path="/reference" element={<ReferencePage/>}></Route>
         <Route path="*" element={() => {
