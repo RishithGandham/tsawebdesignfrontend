@@ -79,7 +79,7 @@ function EventDisplayPage({ props }) {
                 <h5><strong> Cost: </strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Free</h5>
                 <h5><strong> Details: </strong> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {event && event.description}</h5>
 
-                {auth ? <button className="btn btn-primary mb-4" onClick={subscribeToEvent}>Register For This Event <ImEnter size={30} /></button>: <button className="btn btn-primary" onClick={() => window.location.href = '/#/login'}>You Need To Register Or Login To Sign Up For An Event</button>}
+                {auth ? <button className="btn btn-primary mb-4" onClick={subscribeToEvent}>Register For This Event <ImEnter size={30} /></button>: <button className="btn btn-primary mb-4" onClick={() => window.location.href = '/#/login'}>You Need To Register Or Login To Sign Up For An Event</button>}
                 
               </div>
             </div>

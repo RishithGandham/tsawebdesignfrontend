@@ -77,7 +77,7 @@ const NavbarComponent = () => {
                                         <a class="dropdown-item" href="/#/home">Dashboard</a>
                                         <a class="dropdown-item text-danger" onClick={logout} >Logout</a>
                                     </div>
-                                </li>
+                                </li>   
                             </ul>
                             : <></>}
 
