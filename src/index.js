@@ -14,8 +14,8 @@ import LoginPage from './pages/login.page';
 import EventsPage from './pages/events.page';
 import RegisterPage from './pages/register.page';
 import EventDisplayPage from './pages/eventdisplay.page.js';
-import UserNavbarComponent from './component/usernavbar.component';
 import Footer from './component/footer.component';
+import FunActivitiesPage from './pages/funactivities.page';
 
 
 //protocted route
@@ -46,9 +46,9 @@ ReactDOM.render(
         <Route path="/register" element={<RegisterPage/>}></Route>
         <Route path="/events" element={<EventsPage/>}></Route>
         <Route path="/event/" element={<EventDisplayPage/>}></Route>
-        <Route path="/" element={<App/>}></Route>
+        <Route path="/activities" element={<FunActivitiesPage/>}></Route>
         <Route path="/reference" element={<ReferencePage/>}></Route>
-        
+        <Route path="/" element={<App/>}></Route>
         <Route path="*" element={() => {
           return (
           <div className='404-container'>

@@ -2,7 +2,7 @@ import React from 'react'
 
 function FunActivitiesPage() {
 
-    const [kahoots, setKahoots] = useState(['', '']);
+    
 
 
 
@@ -14,10 +14,25 @@ function FunActivitiesPage() {
 
 
                 <h3 className='text-center'>Kahoot Links</h3>
+                <ol className='mb-5 '>
+                    <li><a href='https://kahoot.it/'>Diwali Kahoot</a></li>
+                    <li><a href='https://kahoot.it/'>Hannukah Kahoot</a></li>
+                </ol>
 
-                {kahoots && kahoots.map((kahoot) => {
-                    <a href={kahoot} className='btn btn-primary mb-3' target='_blank'>{kahoot.name}</a>
-                })}
+                <h3 className='text-center mt-5'>Youtube Video Guide Embeds</h3>
+
+                {/* bootstrap video */}
+                <div className='embed-responsive embed-responsive-16by9 mb-3'>
+                    <iframe className='embed-responsive-item' src='https://www.youtube.com/embed/'></iframe>
+                </div>
+                <div className='embed-responsive embed-responsive-16by9 mb-3'>
+                    <iframe className='embed-responsive-item' src='https://www.youtube.com/embed/'></iframe>
+                </div>
+
+
+
+                <div className=''></div>
+                
 
             </div>
         </>

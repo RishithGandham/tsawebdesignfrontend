@@ -65,7 +65,7 @@ function EventDisplayPage({ props }) {
         {event && <div className='container'>
           <div class="row ">
             <div class="col d-flex justify-content-center ">
-              <img class="rounded   image-event"
+              <img class="rounded card-image-top  image-event"
                 src={event.img_url} alt="Card image cap" />
             </div>
           </div>
