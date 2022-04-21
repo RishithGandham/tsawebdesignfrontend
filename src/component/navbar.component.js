@@ -42,7 +42,7 @@ const NavbarComponent = () => {
                                     <Link to="/register" className="nav-link">Register</Link>
                                 </li>
                                 <li className="nav-item">
-                                    <Link to="" className="nav-link">Portfolio</Link>
+                                    <Link to="/reference" className="nav-link">Reference Page</Link>
                                 </li>
                                 
                             </ul> : <></>}
@@ -54,8 +54,7 @@ const NavbarComponent = () => {
                                         {localStorage.getItem('userName')}
                                     </a>
                                     <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                        <a class="dropdown-item" href="#">Dashboard</a>
-                                        <a class="dropdown-item" href="#">Settings</a>
+                                        <a class="dropdown-item" href="/#/home">Dashboard</a>
                                         <a class="dropdown-item text-danger" onClick={logout} >Logout</a>
                                     </div>
                                 </li>

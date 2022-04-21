@@ -41,7 +41,7 @@ function EventsPage() {
         {events.map((event) => (
           <a key={event._id} href={`/#/event?q=${event._id}`} className='list-group-item list-group-item-action flex-column align-items-start'>
             <div className='d-flex w-100 justify-content-between'>
-              <h3 className='mb-1 text-capitalize'><strong>{event.name} </strong > </h3>
+              <h3 className='mb-1 text-capitalize'>{event.name}</h3>
               <h5 className='btn ' onClick={_ => {displayeEvent(event._id)}}>{event.date.slice(0, 10)}</h5>
             </div>
             <p className='mb-1'>{event.description.slice(0, 80).concat('...')}</p>

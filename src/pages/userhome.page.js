@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from 'react'
 import authInstance from '../util/axios.util'
-import {FcInfo} from 'react-icons/fc'
-import {IoIosExit} from 'react-icons/io'
+import { FcInfo } from 'react-icons/fc'
+import { IoIosExit } from 'react-icons/io'
+import { ReactComponent as Line} from './images/line.svg'
 
 function UserHomePage() {
   const [events, setEvents] = useState([])
+  const [noevents, setNoEvents] = useState(false);
 
   useEffect(() => {
     const fetchStats = async () => {
@@ -12,7 +14,11 @@ function UserHomePage() {
     }
     fetchStats()
       .then((response) => {
-        setEvents(response.data.events);  
+        setEvents(response.data.events);
+        if (response.data.events.length === 0) {
+          setNoEvents(true);
+        }
+
       })
       .catch((error) => {
         console.log(error.response)
@@ -37,7 +43,7 @@ function UserHomePage() {
   }
 
   function info(id) {
-    window.location.href = `/event/${id}`
+    window.location.href = `/#/event/?q=${id}`
   }
 
 
@@ -46,21 +52,24 @@ function UserHomePage() {
     <>
       {/* list group  */}
       <div className='container '>
-        <h1 className='mb-5'>Registered Events</h1>
+        <h1 className=' text-center mb-4 display-3'>Registered Events</h1>
+        
+
         <div className='d-flex justify-content-center'>
 
-          <div class="list-group ">
+          <div class="list-group-flush ">
             {events && events.map((event) => (
-              <li key={event._id}class="list-group-item list-group-item-action flex-column align-items-start ">
+              <li key={event._id} class="list-group-item list-group-item-action flex-column align-items-start ">
                 <div class="d-flex w-100 justify-content-between">
-                  <h5 class="mb-1 text-capitalize">{event.name}</h5>
+                  <h3 class="mb-1 text-capitalize">{event.name}</h3>
 
                 </div>
                 <p class="mb-1">{event.description.slice(0, 150).concat('...')}</p>
-                <small  className='btn ' onClick={_ => {unRegister(event._id)}}><IoIosExit size={30}/></small> &nbsp; 
-                <small className='btn '><FcInfo size={30}/></small>
+                <small className='btn ' onClick={_ => { unRegister(event._id) }}><IoIosExit size={30} /></small> &nbsp;
+                <small className='btn ' onClick={_ => info(event._id)}><FcInfo size={30} /></small>
               </li>
             ))}
+            {noevents ? <h3>You have no registered events</h3> : null}
           </div>
         </div>
       </div>

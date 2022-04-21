@@ -1,5 +1,7 @@
 import React, {useState}from 'react'
-import light from './images/light.svg';
+// import light from './images/light.png';
+import {ReactComponent as Light} from './images/light.svg';
+
 import axios from 'axios';
 function LoginPage() {
 
@@ -18,6 +20,7 @@ function LoginPage() {
       localStorage.setItem('user', response.data.user);
       localStorage.setItem('userName', response.data.user.firstName);
       window.location.href = '/#/home'
+      window.location.reload();
     }).catch(error => {
       if(error.response) {
         console.log(error.response.data);    
@@ -44,7 +47,8 @@ function LoginPage() {
         </form>
 
         <div className='justify-content-center d-flex'>
-          <img src={light} alt="light" className='light-image'  />
+          {/* <img src={light} alt="light" className='light-image'  /> */}
+          <Light className='light-image' />
         </div>
         </div>
       </div>

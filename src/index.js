@@ -17,6 +17,7 @@ import EventDisplayPage from './pages/eventdisplay.page.js';
 import UserNavbarComponent from './component/usernavbar.component';
 import Footer from './component/footer.component';
 
+
 //protocted route
 import ProtectedRoute from './util/auth.util';
 
@@ -47,6 +48,7 @@ ReactDOM.render(
         <Route path="/event/" element={<EventDisplayPage/>}></Route>
         <Route path="/" element={<App/>}></Route>
         <Route path="/reference" element={<ReferencePage/>}></Route>
+        
         <Route path="*" element={() => {
           return (
           <div className='404-container'>

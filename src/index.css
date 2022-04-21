@@ -1,4 +1,7 @@
-@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400&display=swap");
+
+/* @import url('https://fonts.googleapis.com/css2?family=Archivo:wght@300&family=Epilogue:wght@300&family=Manrope:wght@500&family=Ubuntu:wght@300&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Sora&display=swap');
 
 
 :root {
@@ -14,44 +17,43 @@
 }
 
 
-body {
+html, body  {
   background-color: var(--primary-color);
+  min-height: 100%;
+  font-family: "Sora", sans-serif;
+  position: relative;
 }
+
 #root {
-  height: calc(100vh + 80vh); 
-  
-}
-
-.video {
-  border-radius: 25px;
-  height: 40vw;
-  width: 70vw;
-  overflow: hidden;
-}
-
-.video-container {
-  padding-top: 10vh;
+  height: 100vh;
+  display: flex;
+ flex-direction: column;
 }
 
 .nav-item > a {
   color: rgb(255, 255, 255) !important;
 }
 
-.video-home-page {
-  border-radius: 30px !important;
-}
-
-body {
-  font-family: "Nunito", sans-serif;
-}
-
 .light-image {
-  width: 60vw;
-  height: 60vh;
+  margin-top: 5vh;
+  width: 50vw;
+  height: 50vh;
 }
+@media screen and (max-width: 768px) {
+  .light-image {
+    width: 100vw;
+    height: 200px;
+  }
+}
+  
+
 
 .list-group-item {
   background: none;
+  border-color: var(--secondary-color);
+  color: rgb(0, 0, 0);
+
+
 }
 
 .list-group-item:hover {
@@ -61,12 +63,13 @@ body {
 
 
 .footer-page-footer {
+  position: relative;
+  bottom: 0;
+  left: 0px;
+  width: 100%;
   background-color: var(--secondary-color);
-}
-
-
-.slider-div {
-  height: 40vh;
+  margin-top: auto;
+  
 }
 
 
@@ -75,9 +78,6 @@ body {
   margin-bottom: 50px;
 }
 
-.upcoming-events {
-  border-color: black;
-}
 
 
 .image-event {
@@ -90,7 +90,5 @@ body {
   height: 80vh;
 }
 
-.upcoming-events {
-  width: 60vw;
-}
+
 
