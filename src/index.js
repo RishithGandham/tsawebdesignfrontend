@@ -16,6 +16,7 @@ import RegisterPage from './pages/register.page';
 import EventDisplayPage from './pages/eventdisplay.page.js';
 import Footer from './component/footer.component';
 import FunActivitiesPage from './pages/funactivities.page';
+import SourcesPage from './pages/sources.page';
 
 
 //protocted route
@@ -48,6 +49,7 @@ ReactDOM.render(
         <Route path="/event/" element={<EventDisplayPage/>}></Route>
         <Route path="/activities" element={<FunActivitiesPage/>}></Route>
         <Route path="/reference" element={<ReferencePage/>}></Route>
+        <Route path="/sources" element={<SourcesPage/>}></Route>
         <Route path="/" element={<App/>}></Route>
         <Route path="*" element={() => {
           return (

@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import authInstance from '../util/axios.util'
 import { FcInfo } from 'react-icons/fc'
 import { IoIosExit } from 'react-icons/io'
-import { ReactComponent as Line} from './images/line.svg'
+import { ReactComponent as Line } from './images/line.svg'
 
 function UserHomePage() {
   const [events, setEvents] = useState([])
@@ -36,6 +36,10 @@ function UserHomePage() {
       .then((response) => {
         console.log(response.data)
         setEvents(events.filter(event => event._id !== id))
+        console.log(events.length)
+        if (events.length === 0) {
+          setNoEvents(true);
+        }
       })
       .catch((error) => {
         console.log(error.response)
@@ -53,13 +57,13 @@ function UserHomePage() {
       {/* list group  */}
       <div className='container mb-5'>
         <h1 className=' text-center mb-4 display-3'>Registered Events</h1>
-        
+
 
         <div className='d-flex justify-content-center'>
 
           <div class="list-group-flush ">
             {events && events.map((event) => (
-              <li key={event._id} class="list-group-item list-group-item-action flex-column align-items-start ">
+              <li key={event._id} class="list-group-item  list-group-item-static list-group-item-action flex-column align-items-start ">
                 <div class="d-flex w-100 justify-content-between">
                   <h3 class="mb-1 text-capitalize">{event.name}</h3>
 
@@ -70,7 +74,15 @@ function UserHomePage() {
               </li>
             ))}
             {noevents ? <h3>You have no registered events</h3> : null}
+
           </div>
+
+
+
+        </div>
+        <div className='container text-center mt-5 text-muted'>
+          {!noevents ? <p><i>We will send you Zoom meeting details as get we closer to the time of this event.</i></p> : null}
+          
         </div>
       </div>
     </>

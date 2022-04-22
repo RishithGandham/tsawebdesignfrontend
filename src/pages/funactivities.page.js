@@ -18,7 +18,7 @@ function FunActivitiesPage() {
                     <li><a target="_blank" href='https://create.kahoot.it/share/hanukkah/d80b453d-bfe7-4cd0-8582-a5cb52c50938'>Hannukah Kahoot</a></li>
                 </ol>
 
-                <h3 className='text-center mt-5'>Youtube Video Guide Embeds</h3>
+                <h3 className='text-center mt-5'>YouTube Video Guide Embeds</h3>
 
                 {/* bootstrap video */}
                 <h4></h4>

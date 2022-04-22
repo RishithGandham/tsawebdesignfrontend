@@ -17,7 +17,7 @@ function EventsPage() {
 
     fetchEvents()
       .then(response => {
-        setEvents(response.data.events);
+        setEvents(response.data.events.sort((a, b) => Date.parse(a.date) - Date.parse(b.date)));
       })
       .catch(err => {
         console.log(err.response);
@@ -39,7 +39,7 @@ function EventsPage() {
       
       <div className='list-group list-group-flush'>
         {events.map((event) => (
-          <a key={event._id} href={`/#/event?q=${event._id}`} className='list-group-item list-group-item-action flex-column align-items-start'>
+          <a key={event._id} href={`/#/event?q=${event._id}`} className='list-group-item list-group-item-highlight list-group-item-action flex-column align-items-start'>
             <div className='d-flex w-100 justify-content-between'>
               <h3 className='mb-1 text-capitalize'>{event.name}</h3>
               <h5 className='btn ' onClick={_ => {displayeEvent(event._id)}}>{event.date.slice(0, 10)}</h5>
@@ -48,6 +48,10 @@ function EventsPage() {
           </a>
         ))}
       </div>
+
+      <div className='container text-center mt-5 text-muted'>
+            <p><i>We will send you Zoom meeting details as we get closer to the time of this event.</i></p>
+          </div>
     </div>
   </>
   )

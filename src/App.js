@@ -44,31 +44,31 @@ function App() {
           src='http://tsawebapp.herokuapp.com/assets/sunflower.webp' alt="Card image cap" />
       </div>
 
-      <div className='container text-center mt-3'>
+      <div className='container  mt-3'>
         <div class="hero mb-5">
-          <h4>For many years, humans have seeked out light and hope; it provides comfort, warmth, the ability to see and the energy to grow food. Light and Hope is celebrated throughout this world, because it shows that during the dark times, there is still hope and light. This is the true importance that these festivals across the world are trying to commemorate. </h4>
+          <h4>For many years, humans have sought out light and hope; it provides comfort, warmth, the ability to see, and the energy to grow food. Light and Hope are celebrated throughout this world because it shows that during the dark times, there is still hope and light. This is the true importance that these festivals across the world are trying to commemorate.</h4>
         </div>
       </div>
 
-      
-          <div className='container upcoming-events text-center mb-5'>
-            <h2 className=''>Upcoming Events</h2>
-            <div className='list-group list-group-flush mb-5 mt-3'>
-              {events && events.map((event) => (
-                <li key={event._id} className='list-group-item list-group-item-action flex-column align-items-start'>
-                  
-                    <h3 className='mb-1 text-capitalize '><strong>{event.name} - {event.date.slice(0, 10)} </strong > </h3>
-                  
-                  <p className='mb-1'>{event.description.slice(0, 80).concat('...')}</p>
-                </li>
-              ))}
-            </div>
-          </div>
-        
 
-      
+      <div className='container upcoming-events text-center mb-5'>
+        <h2 className=''>Upcoming Events</h2>
+        <div className='list-group list-group-flush  mb-5 mt-3'>
+          {events && events.map((event) => (
+            <li key={event._id} className='list-group-item list-group-item-static list-group-item-action flex-column align-items-start'>
 
-      
+              <h3 className='mb-1 text-capitalize '><strong>{event.name} - {event.date.slice(0, 10)} </strong > </h3>
+
+              <p className='mb-1'>{event.description.slice(0, 80).concat('...')}</p>
+            </li>
+          ))}
+        </div>
+      </div>
+
+
+
+
+
 
     </>
   );
