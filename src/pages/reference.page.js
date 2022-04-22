@@ -5,9 +5,9 @@ function ReferencePage() {
     return (
         <>
             <div className='container text-center'>
-                <h1 className='text-center display-3 '>Reference Page</h1>
+                <h1 className='text-center display-4 '>Reference Page</h1>
                 <hr className='mb-5'></hr>
-                <a href='http://tsawebapp.herokuapp.com/assets/worklog.pdf' download><h4 className='mb-3 '>Plan of Work Log</h4></a>
+                <a href='http://tsawebapp.herokuapp.com/assets/worklogs.pdf' download><h4 className='mb-3 '>Plan of Work Log</h4></a>
                 <a href='http://tsawebapp.herokuapp.com/assets/studentcopyright.pdf' download><h4 className='mb-3 '>Student Copyright Checklist</h4></a>
                 <a href='http://tsawebapp.herokuapp.com/assets/citations.pdf' download><h4 className='mb-3 mb-5'>Citations</h4></a>
 
@@ -22,7 +22,7 @@ function ReferencePage() {
                     <h6>The MERN technology stack was used to develop this application</h6>
                     
                 </div>
-                
+
                 <hr className='mb-5'/>
 
                 <h3 className='mb-3 text-muted'> Hosting & Other Services</h3>

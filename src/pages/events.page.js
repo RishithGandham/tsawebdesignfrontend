@@ -33,7 +33,7 @@ function EventsPage() {
   return (
   <>
     <div className='container text-center '>
-      <h1 className='mb-5 display-1'>Events</h1>
+      <h1 className='mb-5 display-4'>Events</h1>
     </div>
     <div className='container mb-5'>
       

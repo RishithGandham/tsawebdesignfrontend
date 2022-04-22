@@ -104,33 +104,29 @@ function EventDisplayPage({ props }) {
               <h5><strong>Description:</strong></h5>
             </div>
             <div class="col-9 text-justify">
+
+            </div>
+          </div>
+          <div class='row'>
+
+            <div class="col-12 text-justify">
               <h5>{event && event.description}</h5>
             </div>
           </div>
-          <div class='row mt-3'>
-            <div class="col-3">
-              
-            </div>
-            <div class="col-3">
-              <h5><strong><Link to='/activities'>Fun Activities</Link></strong></h5>
-            </div>
-            
-          </div>
-          <div class='row mt-3'>
-            <div class="col-3">
-              
-            </div>
-            <div class="col-3">
-            {auth ? <button className="btn btn-primary mb-4 mt-2" onClick={subscribeToEvent}>Register For This Event <ImEnter size={30} /></button>: <button className="btn btn-primary mb-4 mt-2" onClick={() => window.location.href = '/#/login'}>You Need To Register Or Login To Sign Up For An Event</button>}
-            </div>
-            
-          </div>
+
+          <h5><strong><Link to='/activities'>Fun Activities</Link></strong></h5>
 
 
-         
 
-          
-          
+
+          {auth ? <button className="btn btn-primary mb-4 mt-2" onClick={subscribeToEvent}>Register For This Event <ImEnter size={30} /></button> : <button className="btn btn-primary mb-4 mt-2" onClick={() => window.location.href = '/#/login'}>You Need To Register Or Login To Sign Up For An Event</button>}
+
+
+
+
+
+
+
           {/* &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {event && event.date.slice(0, 10)} 
                 <h5><strong> Sponsor: </strong> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; TSA Team</h5>
                 <h5><strong> Event Location: </strong> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Online</h5>
@@ -141,8 +137,8 @@ function EventDisplayPage({ props }) {
 
         </div>
       </div>}
-         
-        
+
+
       {/* { event &&
         
       } */}

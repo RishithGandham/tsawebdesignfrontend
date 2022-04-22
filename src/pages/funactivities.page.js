@@ -10,7 +10,7 @@ function FunActivitiesPage() {
     return (
         <>
             <div className='container'>
-                <h1 className='text-center display-3 mb-5'>Fun Activities</h1>
+                <h1 className='text-center display-4 mb-5'>Fun Activities</h1>
 
                 <h3 className='text-center'>Kahoot Links</h3>
                 <ol className='mb-5 '>
