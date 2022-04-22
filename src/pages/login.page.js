@@ -22,7 +22,7 @@ function LoginPage() {
       window.location.href = '/#/home/?login=true'
       setInterval( () => {
         window.location.reload();
-      }, 5000)
+      }, 1000)
       // window.location.reload();
     }).catch(error => {
       if(error.response) {

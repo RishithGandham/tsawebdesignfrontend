@@ -26,7 +26,7 @@ function RegisterPage() {
       window.location.href = '/#/home/?login=true'
       setInterval( () => {
         window.location.reload();
-      }, 5000)
+      }, 1000)
       // window.location.reload()
 
     }).catch(error => {
