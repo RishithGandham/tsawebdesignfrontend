@@ -24,6 +24,7 @@ function RegisterPage() {
       localStorage.setItem('user', response.data.user);
       localStorage.setItem('userName', response.data.user.firstName);
       window.location.href = '/#/home'
+      window.location.reload()
 
     }).catch(error => {
       if(error.response) {

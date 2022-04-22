@@ -46,17 +46,25 @@ html, body  {
   }
 }
   
+.list-group-item-static {
+  background-color: var(--primary-color)
+}
+
+.list-group-item-static:hover {
+  background-color: var(--primary-color)
+}
 
 
-.list-group-item {
+.list-group-item-highlight {
   background: none;
-  border-color: var(--secondary-color);
   color: rgb(0, 0, 0);
+  background-color: var(--primary-color)
 
 
 }
 
-.list-group-item:hover {
+.list-group-item-highlight:hover {
+  background-color: var(--primary-color);
   background: none;
   brightness: 0.8;
 }
@@ -89,6 +97,10 @@ html, body  {
   width: 80vw;
   height: 80vh;
 }
+h4{
+  font-size:1rem;
+}
+
 
 
 

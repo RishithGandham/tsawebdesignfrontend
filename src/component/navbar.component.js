@@ -29,14 +29,14 @@ const NavbarComponent = () => {
 
                     <div className="collapse navbar-collapse " id="navbarSupportedContent">
 
-                        {!authenticated  ?
+                        {!authenticated ?
                             <ul className="navbar-nav   ">
-                                
+
                                 <li className="nav-item">
                                     <Link to="/events" className="nav-link">Events</Link>
                                 </li>
-                                
-                                
+
+
 
                                 <li className="nav-item">
                                     <Link to="/activities" className="nav-link">Fun Activities</Link>
@@ -45,7 +45,14 @@ const NavbarComponent = () => {
                                 <li className="nav-item">
                                     <Link to="/reference" className="nav-link">Reference Page</Link>
                                 </li>
+
+                                <li className="nav-item">
+                                    <Link to="/sources" className="nav-link">Sources of Information </Link>
+                                </li>
+
                                 
+
+
                                 <li className="nav-item">
                                     <Link to="/register" className="nav-link">Register</Link>
                                 </li>
@@ -53,17 +60,20 @@ const NavbarComponent = () => {
                                 <li className="nav-item">
                                     <Link to="/login" className="nav-link">Login</Link>
                                 </li>
-                                
+
+
+
+
                             </ul> : <></>}
 
-                        {authenticated  ?
+                        {authenticated ?
                             <ul className="navbar-nav ">
-                                
-                                
+
+
                                 <li className="nav-item">
                                     <Link to="/events" className="nav-link">Events</Link>
                                 </li>
-                                
+
 
                                 <li className="nav-item">
                                     <Link to="/activities" className="nav-link">Fun Activities</Link>
@@ -72,6 +82,13 @@ const NavbarComponent = () => {
                                 <li className="nav-item">
                                     <Link to="/reference" className="nav-link">Reference Page</Link>
                                 </li>
+
+                                <li className="nav-item">
+                                    <Link to="/sources" className="nav-link">Sources of Information </Link>
+                                </li>
+
+
+
 
                                 <li class="nav-item dropdown">
                                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -81,7 +98,7 @@ const NavbarComponent = () => {
                                         <a class="dropdown-item" href="/#/home">Dashboard</a>
                                         <a class="dropdown-item text-danger" onClick={logout} >Logout</a>
                                     </div>
-                                </li>   
+                                </li>
                             </ul>
                             : <></>}
 
