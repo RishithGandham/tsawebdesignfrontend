@@ -2,16 +2,14 @@ import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { logout } from '../util/auth.util';
 import { isAuth } from '../util/auth.util';
-const NavbarComponent = () => {
+const NavbarComponent = (props) => {
     let executeBlock = false;
     const [authenticated, isAuthenticated] = useState(false);
 
     useEffect(_ => {
         (async () => {
             const auth = await isAuth();
-            isAuthenticated(auth);
-            executeBlock = true;
-            console.log(auth);
+            props.trigger(auth);
         })();
     }, [])
 
@@ -29,7 +27,7 @@ const NavbarComponent = () => {
 
                     <div className="collapse navbar-collapse " id="navbarSupportedContent">
 
-                        {!authenticated ?
+                        {!props.navbarstate ?
                             <ul className="navbar-nav   ">
 
                                 <li className="nav-item">
@@ -66,7 +64,7 @@ const NavbarComponent = () => {
 
                             </ul> : <></>}
 
-                        {authenticated ?
+                        {props.navbarstate ?
                             <ul className="navbar-nav ">
 
 

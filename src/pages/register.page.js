@@ -2,7 +2,7 @@ import React, {useState} from 'react'
 import light from './images/light.svg';
 import axios from 'axios'
 
-function RegisterPage() {
+function RegisterPage(props) {
 
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -24,9 +24,10 @@ function RegisterPage() {
       localStorage.setItem('user', response.data.user);
       localStorage.setItem('userName', response.data.user.firstName);
       window.location.href = '/#/home/?login=true'
-      setInterval( () => {
-        window.location.reload();
-      }, 1000)
+      // setInterval( () => {
+      //   window.location.reload();
+      // }, 500)
+      props.trigger(!props.navbarstate);
       // window.location.reload()
 
     }).catch(error => {
