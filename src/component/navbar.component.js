@@ -36,12 +36,14 @@ const NavbarComponent = () => {
                                     <Link to="/events" className="nav-link">Events</Link>
                                 </li>
                                 
-                                <li className="nav-item">
-                                    <Link to="/reference" className="nav-link">Reference Page</Link>
-                                </li>
+                                
 
                                 <li className="nav-item">
                                     <Link to="/activities" className="nav-link">Fun Activities</Link>
+                                </li>
+
+                                <li className="nav-item">
+                                    <Link to="/reference" className="nav-link">Reference Page</Link>
                                 </li>
                                 
                                 <li className="nav-item">
@@ -61,12 +63,14 @@ const NavbarComponent = () => {
                                 <li className="nav-item">
                                     <Link to="/events" className="nav-link">Events</Link>
                                 </li>
-                                <li className="nav-item">
-                                    <Link to="/reference" className="nav-link">Reference Page</Link>
-                                </li>
+                                
 
                                 <li className="nav-item">
                                     <Link to="/activities" className="nav-link">Fun Activities</Link>
+                                </li>
+
+                                <li className="nav-item">
+                                    <Link to="/reference" className="nav-link">Reference Page</Link>
                                 </li>
 
                                 <li class="nav-item dropdown">
