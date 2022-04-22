@@ -32,10 +32,10 @@ function EventsPage() {
 
   return (
   <>
-    <div className='container text-center'>
+    <div className='container text-center '>
       <h1 className='mb-5 display-1'>Events</h1>
     </div>
-    <div className='container '>
+    <div className='container mb-5'>
       
       <div className='list-group list-group-flush'>
         {events.map((event) => (
