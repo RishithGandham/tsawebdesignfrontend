@@ -20,6 +20,9 @@ function LoginPage() {
       localStorage.setItem('user', response.data.user);
       localStorage.setItem('userName', response.data.user.firstName);
       window.location.href = '/#/home/?login=true'
+      setInterval( () => {
+        window.location.reload();
+      }, 5000)
       // window.location.reload();
     }).catch(error => {
       if(error.response) {
