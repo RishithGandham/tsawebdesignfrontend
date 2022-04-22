@@ -50,7 +50,7 @@ function EventsPage() {
       </div>
 
       <div className='container text-center mt-5 text-muted'>
-            <p><i>We will send you Zoom meeting details as we get closer to the time of this event.</i></p>
+            <p><i>We will send you Zoom meeting details as we get closer to the time of the event.</i></p>
           </div>
     </div>
   </>
