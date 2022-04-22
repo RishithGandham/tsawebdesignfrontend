@@ -46,7 +46,7 @@ function App() {
 
       <div className='container text-center mt-3'>
         <div class="hero mb-5">
-          <h4>For many millennia, humans have seeked out light & hope; it provides comfort, warmth, the ability to see and the energy to grow food. Light and Hope is celebrated throughout this world, because it shows that during the dark times, there is still hope and light. This is the true importance that these festivals across the world are trying to commemorate. </h4>
+          <h4>For many years, humans have seeked out light and hope; it provides comfort, warmth, the ability to see and the energy to grow food. Light and Hope is celebrated throughout this world, because it shows that during the dark times, there is still hope and light. This is the true importance that these festivals across the world are trying to commemorate. </h4>
         </div>
       </div>
 
