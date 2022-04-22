@@ -3,7 +3,7 @@ import React, {useState}from 'react'
 import {ReactComponent as Light} from './images/light.svg';
 
 import axios from 'axios';
-function LoginPage() {
+function LoginPage(props) {
 
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -20,6 +20,7 @@ function LoginPage() {
       localStorage.setItem('user', response.data.user);
       localStorage.setItem('userName', response.data.user.firstName);
       window.location.href = '/#/home/?login=true'
+      props.trigger(!props.navbarstate);
       // window.location.reload();
     }).catch(error => {
       if(error.response) {
