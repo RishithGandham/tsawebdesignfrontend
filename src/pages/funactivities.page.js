@@ -21,7 +21,7 @@ function FunActivitiesPage() {
                 <h3 className='text-center mt-5'>YouTube Video Guide Embeds</h3>
 
                 {/* bootstrap video */}
-                <h4></h4>
+                
                 <div className='embed-responsive embed-responsive-16by9 mb-3'>
                     <iframe className='embed-responsive-item' src="https://www.youtube.com/embed/Ik8ntEDhbfg" ></iframe>
                 </div>

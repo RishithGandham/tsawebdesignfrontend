@@ -7,9 +7,9 @@ function ReferencePage() {
             <div className='container text-center'>
                 <h1 className='text-center display-4 '>Reference Page</h1>
                 <hr className='mb-5'></hr>
-                <a href='http://tsawebapp.herokuapp.com/assets/worklogs.pdf' download><h4 className='mb-3 '>Plan of Work Log</h4></a>
-                <a href='http://tsawebapp.herokuapp.com/assets/studentcopyright.pdf' download><h4 className='mb-3 '>Student Copyright Checklist</h4></a>
-                <a href='http://tsawebapp.herokuapp.com/assets/citations.pdf' download><h4 className='mb-3 mb-5'>Citations</h4></a>
+                <a href='/pdf/worklogs.pdf' target='_blank'><h4 className='mb-3 '>Plan of Work Log</h4></a>
+                <a href='/pdf/studentcopyright.pdf' target='_blank' ><h4 className='mb-3 '>Student Copyright Checklist</h4></a>
+                <a href='/pdf/citations.pdf'target='_blank' ><h4 className='mb-3 mb-5'>Citations</h4></a>
 
 
                 <hr className='mb-5'/>

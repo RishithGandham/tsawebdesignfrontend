@@ -3,12 +3,18 @@ import authInstance from '../util/axios.util'
 import { FcInfo } from 'react-icons/fc'
 import { IoIosExit } from 'react-icons/io'
 import { ReactComponent as Line } from './images/line.svg'
+import {useLocation} from 'react-router-dom'
 
 function UserHomePage() {
   const [events, setEvents] = useState([])
   const [noevents, setNoEvents] = useState(false);
 
+
+  const location = useLocation();
+
   useEffect(() => {
+    
+
     const fetchStats = async () => {
       return await authInstance.get('/eventResource/getAllForUser');
     }
@@ -23,6 +29,13 @@ function UserHomePage() {
       .catch((error) => {
         console.log(error.response)
       })
+
+      const query = new URLSearchParams(location.search);
+      const login = query.get('login');
+      if(login === 'true') {
+        window.location.href = '/#/home/'
+        window.location.reload();
+      }
   }, [])
 
 
@@ -82,7 +95,7 @@ function UserHomePage() {
 
         </div>
         <div className='container text-center mt-5 text-muted'>
-          {!noevents ? <p><i>We will send you Zoom meeting details as get we closer to the time of this event.</i></p> : null}
+          {!noevents ? <p><i>We will send you Zoom meeting details as get we closer to the time of the event.</i></p> : null}
           
         </div>
       </div>

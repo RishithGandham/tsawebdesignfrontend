@@ -23,8 +23,8 @@ function RegisterPage() {
       localStorage.setItem('token', response.data.jwt);
       localStorage.setItem('user', response.data.user);
       localStorage.setItem('userName', response.data.user.firstName);
-      window.location.href = '/#/home'
-      window.location.reload()
+      window.location.href = '/#/home/?login=true'
+      // window.location.reload()
 
     }).catch(error => {
       if(error.response) {

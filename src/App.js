@@ -41,7 +41,7 @@ function App() {
       </div>
       <div className="container d-flex justify-content-center">
         <img class=" card-img-top rounded"
-          src='http://tsawebapp.herokuapp.com/assets/sunflower.webp' alt="Card image cap" />
+          src={process.env.PUBLIC_URL + '/img/sunflower.webp'} alt="Card image cap" />
       </div>
 
       <div className='container  mt-3'>
