@@ -74,38 +74,11 @@ const RouterComponent = () => {
 
 
 ReactDOM.render(
-  <React.StrictMode>
-    {/* <HashRouter basename='/' >
-     <NavbarComponent /> 
-
-      <Routes>
-        <Route path="/about" element={<AboutComponent/>}></Route>
-        
-        <Route path="/home" element={<ProtectedRoute><UserHomePage/></ProtectedRoute>}></Route>
-        <Route path="/login" element={<LoginPage/>}></Route>
-        <Route path="/register" element={<RegisterPage/>}></Route>
-        <Route path="/events" element={<EventsPage/>}></Route>
-        <Route path="/event/" element={<EventDisplayPage/>}></Route>
-        <Route path="/activities" element={<FunActivitiesPage/>}></Route>
-        <Route path="/reference" element={<ReferencePage/>}></Route>
-        <Route path="/sources" element={<SourcesPage/>}></Route>
-        <Route path="/" element={<App/>}></Route>
-        <Route path="*" element={() => {
-          return (
-          <div className='404-container'>
-            <h1 className='404-title'>404</h1>
-            <h3 className='404-text'> Seems like you might of entered an incorrect URL </h3>
-          </div>)
-        }}></Route>
-      </Routes>
-      <Footer />
-      <NotificationContainer/>
-    </HashRouter> */}
+  
 
     <RouterComponent />
 
-    
-  </React.StrictMode>
+  
 , document.getElementById('root')
 );
 

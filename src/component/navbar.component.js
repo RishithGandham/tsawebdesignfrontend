@@ -40,13 +40,16 @@ const NavbarComponent = (props) => {
                                     <Link to="/activities" className="nav-link">Fun Activities</Link>
                                 </li>
 
-                                <li className="nav-item">
-                                    <Link to="/reference" className="nav-link">Reference Page</Link>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        Other Information (TSA)
+                                    </a>
+                                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                        <a class="dropdown-item" href="/#/reference">Reference Page</a>
+                                        <a class="dropdown-item " href='/#/sources' >Sources of Information</a>
+                                    </div>
                                 </li>
-
-                                <li className="nav-item">
-                                    <Link to="/sources" className="nav-link">Sources of Information </Link>
-                                </li>
+                                
 
                                 
 
@@ -71,22 +74,23 @@ const NavbarComponent = (props) => {
                                 <li className="nav-item">
                                     <Link to="/events" className="nav-link">Events</Link>
                                 </li>
-
+                                
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        Other Information (TSA)
+                                    </a>
+                                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                        <a class="dropdown-item" href="/#/reference">Reference Page</a>
+                                        <a class="dropdown-item " href='/#/sources' >Sources of Information</a>
+                                    </div>
+                                </li>
+                                
 
                                 <li className="nav-item">
                                     <Link to="/activities" className="nav-link">Fun Activities</Link>
                                 </li>
 
-                                <li className="nav-item">
-                                    <Link to="/reference" className="nav-link">Reference Page</Link>
-                                </li>
-
-                                <li className="nav-item">
-                                    <Link to="/sources" className="nav-link">Sources of Information </Link>
-                                </li>
-
-
-
+                                
 
                                 <li class="nav-item dropdown">
                                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">

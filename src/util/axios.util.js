@@ -30,8 +30,6 @@ authInstance.interceptors.request.use((config) => {
     }
     return config;
 }, (error) => {
-    //console log the errors message and status code
-
     return Promise.reject(error);
 });
 
