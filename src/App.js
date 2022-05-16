@@ -15,17 +15,16 @@ function App() {
       .then(response => {
         let today = new Date();
         today.setMonth(today.getMonth() + 1);
-        console.log(today)
+        // console.log(today)
         for (let i = 0; i < response.data.events.length; i++) {
           let event = response.data.events[i];
           let eventDate = new Date();
-          if (Date.parse(event.date) > Date.parse(today)) {
+          if (Date.parse(new Date) > Date.parse(event.date)) {
             response.data.events.splice(i, 1);
-
           }
         }
         setEvents(response.data.events);
-        console.log(events)
+        // console.log(response.data.events)
       })
       .catch(err => console.log(err)) //TODO error handling
 
